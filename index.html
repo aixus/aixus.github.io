@@ -1,0 +1,281 @@
+<html><head><base href="https://www.aixus.com.ar">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aixus AI - Consultoría y Diseño de Proyectos de Inteligencia Artificial</title>
+    <style>
+        :root {
+            --primary-color: #a7bacd;
+            --secondary-color: #24435e;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 1rem; 
+        }
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100vw;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        main {
+            margin-top: 160px;
+        }
+        section {
+            padding: 4rem 2rem;
+            scroll-margin-top: 80px;
+        }
+        .hero {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            max-width: 100%
+        }
+        .hero h4 {
+            font-size: 1.2rem;
+            max-width: 80%;
+            margin: 0 auto 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--secondary-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        .services {
+            display: grid;
+            text-align: center;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .services-title h1{
+            text-align: center;
+            color: var(--secondary-color)
+
+        }
+        .service-card {
+            
+            background-color: white;
+            text-align: center;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        .about-us, .contact {
+            background-color: white;
+        }
+        .about-us {
+            text-align: center;
+        }
+        .about-us h1{
+            color: var(--secondary-color)
+        }
+        .about-us p{
+            text-align: justify;
+            letter-spacing: 0.5px; /* Añade un ligero espaciado entre letras */
+            color: #333; /* Color más oscuro para mayor contraste */
+            max-width: 95%;
+            margin: 0 auto;
+        }
+        .contact form {
+            display: grid;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .contact h2 {
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact button:hover {
+            background-color:var(--secondary-color);
+        }
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <nav>
+            <img src="logo_fondo_transparente.png" alt="Aixus Logo" class="logo" width="120" height="120">
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#sobre-nosotros">Sobre AIXUS</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h2>Consultoría y Diseño de Proyectos de Tecnología con un enfoque especializado en Inteligencia Artificial.</h2>
+            <h4>En AIXUS, impulsamos la innovación y el crecimiento de su empresa a través de soluciones de IA personalizadas y consultoría experta.</h4>
+            <a href="#contacto" class="cta-button">Comience su Transformación Digital</a>
+        </section>
+
+        <section id="servicios" class="services-title">
+            <h1>Servicios</h1>
+            <div class="services">
+                <div class="service-card">
+                    <h3>Consultoría en IA</h3>
+                    <p>Asesoramiento estratégico para integrar herramientas de Inteligencia Artificial en su negocio, optimizando procesos y mejorando la toma de decisiones.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Diseño de Proyectos</h3>
+                    <p>Desarrollo de soluciones innovadoras basadas en IA y herramientas de automatización, adaptadas a las necesidades específicas de su empresa.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Análisis de Datos</h3>
+                    <p>Descubra insights valiosos en sus datos con nuestros análisis predictivos y descriptivos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sobre-nosotros" class="about-us">
+            <h1>Sobre AIXUS</h1>
+            <p>AIXUS surge como respuesta a la necesidad de ofrecer una perspectiva más realista sobre la inteligencia artificial. 
+                Mientras algunas predicciones son fascinantes—"la IA resolverá todos nuestros problemas"—y otras nos preocupan—"la IA reemplazará a todos los trabajadores"—, en AIXUS creemos firmemente que la mejor versión de la IA se alcanzará a través de la sinergia entre la inteligencia artificial y la creatividad humana. Los algoritmos de IA son cada vez más poderosos, pero solo se maximizan cuando se aplican de manera correcta y específica. Mientras las grandes empresas buscan desarrollar soluciones estandarizadas y genéricas, en AIXUS estamos convencidos de que el verdadero valor de estos algoritmos se revela cuando se integran con nuestras necesidades particulares.</p>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2>Contáctenos</h2>
+            <form>
+                <input type="text" name="name" placeholder="Su nombre" required>
+                <input type="email" name="email" placeholder="Su correo electrónico" required>
+                <textarea name="message" placeholder="Su mensaje" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AIXUS. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Animation for service cards
+            const serviceCards = document.querySelectorAll('.service-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            serviceCards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Form submission (you would typically handle this with a backend)
+            document.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Gracias por su mensaje. Nos pondremos en contacto pronto.');
+                this.reset();
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
