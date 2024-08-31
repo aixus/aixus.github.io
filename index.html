@@ -1,4 +1,4 @@
-<html><head><base href="https://www.aixus.com.ar">
+<html><head><base href="">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aixus AI - Consultoría y Diseño de Proyectos de Inteligencia Artificial</title>
@@ -50,13 +50,30 @@
         }
         .nav-links a {
             text-decoration: none;
-            color: var(--text-color);
+            color: var(--secondary-color);
             font-weight: bold;
             transition: color 0.3s ease;
         }
         .nav-links a:hover {
             color: var(--primary-color);
         }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                justify-content: center; /* Centra el logo en la navegación */
+            }
+
+            .nav-links {
+                display: none; /* Oculta los enlaces de navegación */
+            }
+
+            .logo {
+                margin: 0 auto; /* Asegura que el logo esté centrado */
+            }
+        }
+
+
+
         main {
             margin-top: 160px;
         }
@@ -181,7 +198,8 @@
     <div class="container">
     <header>
         <nav>
-            <img src="logo_fondo_transparente.png" alt="Aixus Logo" class="logo" width="120" height="120">
+            <img src="sources/img/logo_fondo_transparente.png" alt="Aixus Logo" width="200" >
+            
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#servicios">Servicios</a>
@@ -275,6 +293,7 @@
                 this.reset();
             });
         });
+        
     </script>
 </div>
 </body>
