@@ -243,9 +243,9 @@
 
         <section id="contacto" class="contact">
             <h2>Contáctenos</h2>
-            <form>
-                <input type="text" name="name" placeholder="Su nombre" required>
-                <input type="email" name="email" placeholder="Su correo electrónico" required>
+            <form id="contact-form">
+                <input type="text" name="from_name" placeholder="Su nombre" required>
+                <input type="email" name="from_email" placeholder="Su correo electrónico" required>
                 <textarea name="message" placeholder="Su mensaje" required></textarea>
                 <button type="submit">Enviar Mensaje</button>
             </form>
@@ -293,8 +293,38 @@
                 this.reset();
             });
         });
+
+    
         
     </script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+        publicKey: "-gMkX3hKNo5ynn4BH",
+        limitRate: {
+        id: 'app',
+        throttle: 10000,
+        },
+    });
+    })();
+    </script>
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            emailjs.sendForm('service_0kc69b9', 'template_u76q6ff', this)
+                .then(function() {
+                    alert('Mensaje enviado correctamente');
+                }, function(error) {
+                    alert('Hubo un error al enviar el mensaje: ' + JSON.stringify(error));
+                });
+            this.reset();
+        });
+    </script>
+    
 </div>
 </body>
 </html>
