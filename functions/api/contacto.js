@@ -1,4 +1,6 @@
 const DESTINATION = "contacto@aixus.com.ar";
+const SENDER = "Formulario web de AIXUS <web@formularios.aixus.com.ar>";
+const RESEND_API_URL = "https://api.resend.com/emails";
 const MAX_BODY_BYTES = 20_000;
 
 function json(body, status = 200) {
@@ -62,8 +64,8 @@ export async function onRequestPost({ request, env }) {
     return json({ ok: false, error: "Completá correctamente los campos obligatorios" }, 400);
   }
 
-  if (!env.CONTACT_EMAIL?.send) {
-    console.error("Falta el binding CONTACT_EMAIL");
+  if (!env.RESEND_API_KEY) {
+    console.error("Falta el secreto RESEND_API_KEY");
     return json({ ok: false, error: "Servicio de correo no configurado" }, 503);
   }
 
@@ -89,14 +91,28 @@ export async function onRequestPost({ request, env }) {
   ].filter(Boolean).join("\n\n");
 
   try {
-    await env.CONTACT_EMAIL.send({
-      to: DESTINATION,
-      from: { email: DESTINATION, name: "Formulario web de AIXUS" },
-      replyTo: { email, name },
-      subject,
-      html,
-      text,
+    const response = await fetch(RESEND_API_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: SENDER,
+        to: [DESTINATION],
+        reply_to: email,
+        subject,
+        html,
+        text,
+      }),
     });
+
+    if (!response.ok) {
+      const details = (await response.text()).slice(0, 1_000);
+      console.error("Resend rechazó la consulta", response.status, details);
+      return json({ ok: false, error: "No se pudo enviar la consulta" }, 502);
+    }
+
     return json({ ok: true });
   } catch (error) {
     console.error("No se pudo enviar la consulta", error);
