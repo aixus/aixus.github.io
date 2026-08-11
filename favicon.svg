@@ -1,4 +1,11 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="16" fill="#0B1B29"/>
-  <path d="M14 37.5C14 28.4 19 22 25.3 22c7.8 0 10.7 20 18.6 20C48.1 42 51 37.7 51 32s-2.9-10-7.1-10c-5.5 0-8.5 9.9-11.7 15.8C29 43.8 26.7 47 21.4 47 15.1 47 11 40.6 11 32s4.1-15 10.4-15c3 0 5.3 1.2 7.4 3.5" stroke="#77DFC1" stroke-width="5" stroke-linecap="round"/>
+  <title>AIXUS</title>
+  <rect width="64" height="64" rx="15" fill="#0B1B29"/>
+  <path
+    d="M12 32C12 23.5 16.8 18 23.8 18C33.4 18 38.9 46 49.4 46C56.8 46 61 40.2 61 32C61 23.8 56.8 18 49.4 18C38.9 18 33.4 46 23.8 46C16.8 46 12 40.5 12 32Z"
+    stroke="#77DFC1"
+    stroke-width="5.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 </svg>
